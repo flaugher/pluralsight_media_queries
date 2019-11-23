@@ -172,6 +172,20 @@ nav ul li:last-child {
 }
 
 /* --- FOOTER ----------------------------------------------------------------------------------- */
+footer {
+  background-color: #424e64;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+  color: #bbc2ca;
+  padding: .75rem;
+  font-size: .9rem;
+}
+footer p a {
+  color: #bbc2ca;
+}
+
 /*----- Clearfix: force an element not to collapse -----*/
 .clearfix:after {
   content: "";
