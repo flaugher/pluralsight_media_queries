@@ -70,6 +70,14 @@ body {
   background-color: orange;
 }
 
+h1 {
+  color: #119944;
+}
+
+footer {
+  background-color: #119944;
+}
+
 @media only screen and (min-width: 560px) {
   body {
     background-color: green;

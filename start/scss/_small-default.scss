@@ -6,6 +6,20 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /* Apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+// Overall styling for the body of the document
 body {
     background-color: orange;
+}
+
+// Overall styling for the navigation of the document
+
+
+// Overall styling for the main part of the document
+h1 {
+    color: $green;
+}
+
+// Overall styling for the footer of the document
+footer {
+    background-color: $green;
 }
