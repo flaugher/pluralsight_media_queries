@@ -117,6 +117,7 @@ html {
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
+  font-size: 16px;
 }
 
 /* --- HEADER ----------------------------------------------------------------------------------- */
@@ -130,9 +131,50 @@ header h1 {
   font-weight: 300;
 }
 header h2 {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
-/* --- BODY ------------------------------------------------------------------------------------- */
-/* --- BODY ------------------------------------------------------------------------------------- */
+/* --- NAVIGATION ------------------------------------------------------------------------------- */
+nav {
+  background-color: #bbc2ca;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  /* When we float these li elements, it takes them out of the nav and they no longer have a
+     background color. We say the nav has "collapsed". Giving it the clearfix class will cause it
+     to stay open such that the floated li elements will have a background color even though
+     they're floating. */
+  /* He put this before the following hover rule so that by default, the New link has a darker background
+     but then if you hover over any link, the link's background will turn darker. */
+}
+nav ul li {
+  float: left;
+  width: 25%;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul li a {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: #424e64;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav ul li.active a {
+  background-color: #9ea8b4;
+}
+nav ul li a:hover {
+  color: #bbc2ca;
+  background-color: #424e64;
+}
+nav ul li:last-child {
+  border-right: none;
+}
+
+/* --- FOOTER ----------------------------------------------------------------------------------- */
+/*----- Clearfix: force an element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

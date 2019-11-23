@@ -8,6 +8,8 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 body {
     font-family: $defaultFont;
     font-weight: $normalWeight;
+    // All rem values based on this.
+    font-size: 16px;
 }
 
 /* --- HEADER ----------------------------------------------------------------------------------- */
@@ -20,10 +22,52 @@ header {
         font-weight: $normalWeight;
     }
     h2 {
-        font-size: 1.05rem;         // Twice the default base size of 16px
+        font-size: 1.3rem;         // Twice the default base size of 16px
         font-weight: $normalWeight;
     }
 }
 
-/* --- BODY ------------------------------------------------------------------------------------- */
-/* --- BODY ------------------------------------------------------------------------------------- */
+/* --- NAVIGATION ------------------------------------------------------------------------------- */
+nav {
+    background-color: $secondaryColor;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    /* When we float these li elements, it takes them out of the nav and they no longer have a
+       background color. We say the nav has "collapsed". Giving it the clearfix class will cause it
+       to stay open such that the floated li elements will have a background color even though
+       they're floating. */
+    ul li {
+        float: left;
+        width: 25%;
+        border-right: 1px solid rgba(0,0,0,0.3);
+    }
+    ul li a {
+            display: block;             // To make it easier for phone users to click the link, make the
+            text-align: center;         // entire link block, not just the link itself, clickable.
+            font-weight: $boldWeight;
+            padding: 0.5rem 0;
+            color: $primaryColor;
+            text-decoration: none;
+            // Create a smooth transition for the subsequent hover rule
+            transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    /* He put this before the following hover rule so that by default, the New link has a darker background
+       but then if you hover over any link, the link's background will turn darker. */
+    ul li.active a {
+        background-color: darken($secondaryColor, 10%);         // Use preprocessor to darken background
+    }                                                           // color by 10%.
+    ul li a:hover {
+        color: $secondaryColor;
+        background-color: $primaryColor;
+    }
+    ul li:last-child {
+        border-right: none;         // Remove right border from last element on the right
+    }
+}
+/* --- FOOTER ----------------------------------------------------------------------------------- */
+
+/*----- Clearfix: force an element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
