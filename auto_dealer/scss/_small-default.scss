@@ -63,6 +63,28 @@ nav {
         border-right: none;         // Remove right border from last element on the right
     }
 }
+/* --- MAIN ------------------------------------------------------------------------------------- */
+main {
+    figure.banner {
+        width: 100%;                // Make banner fill 100% of page width
+    }
+    figure.banner img {             // Make image scalable (this is actually the default)
+        width: 100%;                // Image will fill 100% of width of figure element
+    }
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;   // "New Cars should line up with "Robert's Autos"
+        color: $primaryColor;
+    }
+    hr.fadeAway {
+        // I didn't understand how he used https://www.colorzilla.com/gradient-editor/ to generate this
+        background: linear-gradient(to right, rgba(66,78,100,1) 0%,rgba(66,78,100,0.01) 100%);
+        height: 2px;
+        border: none;
+        margin: 0 $gutter;
+    }
+}
+
 /* --- FOOTER ----------------------------------------------------------------------------------- */
 footer {
     background-color: $primaryColor;
