@@ -71,6 +71,21 @@ main {
     figure.banner img {             // Make image scalable (this is actually the default)
         width: 100%;                // Image will fill 100% of width of figure element
     }
+    /* Here, if we don't set the photo's width to 100%-$gutterdbl, the width of the photo will be
+       100% + $gutter (= 104%) which will cause the (invisible) right border to be off the page, thus
+       requiring the user to scroll. We reduce the width by double the gutter to prevent this. */
+    figure.photo {
+        width: 100%-$gutterdbl;
+        margin: .5rem $gutter;
+        /* border: red 1px solid; */
+    }
+    figure.photo img {              // Make car photos fit inside their containing element
+        width: 100%;
+    }
+    figure.photo figcaption {
+        text-align: center;
+        color: $primaryColor;
+    }
     h1 {
         font-size: 2rem;
         margin: 1rem 0 0 $gutter;   // "New Cars should line up with "Robert's Autos"

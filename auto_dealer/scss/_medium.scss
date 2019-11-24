@@ -1,0 +1,11 @@
+/* --- MAIN ------------------------------------------------------------------------------------- */
+main {
+    figure.photo {                      // For tablets
+        width: 50%-$gutterdbl;
+        // margin: .5rem $gutter;       // This will cascade from _small-default
+        // border: red 1px solid;
+        float: left;                    // This lines up two images side-by-side on tablets.
+                                        // Warning: this causes main element to collapse!
+                                        // Therefore, we add clearfix class to main tag in index.html.
+    }
+}

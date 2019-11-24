@@ -1,0 +1,27 @@
+/* --- NAVIGATION ------------------------------------------------------------------------------- */
+nav {
+    ul {
+        margin-left: $gutter;                         // Aligns "New" link with logo above it.
+        border-left: 1px solid rgba(0,0,0,0.3);     // Adds border to left-most New link
+    }
+    ul li {
+        width: auto;                                  // Move nav links to left on large screens.
+    }
+    ul li:last-child {
+        border-right: 1px solid rgba(0,0,0,0.3);    // Adds border to right-most Location link
+    }
+    ul li a {
+        padding: .5rem 1rem;
+    }
+}
+
+/* --- MAIN ------------------------------------------------------------------------------------- */
+main {
+    figure.photo {                      // For tablets
+        width: 25%-$gutterdbl;
+        // margin: .5rem $gutter;       // This will cascade from _small-default.
+        float: left;                    // This lines up two images side-by-side on tablets.
+                                        // Warning: this causes main element to collapse!
+                                        // Therefore, we add clearfix class to main tag in index.html.
+    }
+}

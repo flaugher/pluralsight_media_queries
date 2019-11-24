@@ -172,11 +172,28 @@ nav ul li:last-child {
 }
 
 /* --- MAIN ------------------------------------------------------------------------------------- */
+main {
+  /* Here, if we don't set the photo's width to 100%-$gutterdbl, the width of the photo will be
+     100% + $gutter (= 104%) which will cause the (invisible) right border to be off the page, thus
+     requiring the user to scroll. We reduce the width by double the gutter to prevent this. */
+}
 main figure.banner {
   width: 100%;
 }
 main figure.banner img {
   width: 100%;
+}
+main figure.photo {
+  width: 96%;
+  margin: 0.5rem 2%;
+  /* border: red 1px solid; */
+}
+main figure.photo img {
+  width: 100%;
+}
+main figure.photo figcaption {
+  text-align: center;
+  color: #424e64;
 }
 main h1 {
   font-size: 2rem;
@@ -210,4 +227,34 @@ footer p a {
   content: "";
   display: table;
   clear: both;
+}
+
+@media only screen and (min-width: 560px) {
+  /* --- MAIN ------------------------------------------------------------------------------------- */
+  main figure.photo {
+    width: 46%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 1140px) {
+  /* --- NAVIGATION ------------------------------------------------------------------------------- */
+  nav ul {
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  nav ul li {
+    width: auto;
+  }
+  nav ul li:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  nav ul li a {
+    padding: .5rem 1rem;
+  }
+
+  /* --- MAIN ------------------------------------------------------------------------------------- */
+  main figure.photo {
+    width: 21%;
+    float: left;
+  }
 }
