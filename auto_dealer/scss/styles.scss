@@ -4,10 +4,12 @@
 
 @import "small-default";
 
-@media only screen and (min-width: 560px) {
-  @import "medium";   
+//@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 35rem) {     // 35rem = 560px.
+  @import "medium";
 } // end media query
 
-@media only screen and (min-width: 1140px) {
+//@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 60rem) {     // 1 rem = 16px. 60 rem = 60 x 16 = 960px.
     @import "large";
 } // end media query

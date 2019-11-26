@@ -246,7 +246,7 @@ footer p a {
   clear: both;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 35rem) {
   /* --- MAIN ------------------------------------------------------------------------------------- */
   main {
     /* Since the blog articles are of different lengths (i.e. heights in our layout), set the first,
@@ -265,7 +265,7 @@ footer p a {
     clear: left;
   }
 }
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 60rem) {
   /* --- BODY ------------------------------------------------------------------------------------- */
   body {
     background-image: url(../images/polonez_car.png);
