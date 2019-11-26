@@ -2,6 +2,8 @@
 body {
     background-image: url(../images/polonez_car.png);  // Add subtle pattern to page's background
 }
+/* Note that in lesson "Modifying the Color Scheme", he shows how to make the header and footer
+   fill the entire width of the screen but keep left and right margins on the body content. */
 div#wrapper {                        // I like how he does this!
     max-width: 80rem;                // Center the entire page horizontally
     margin: 0 auto;                  // "auto" means center the content

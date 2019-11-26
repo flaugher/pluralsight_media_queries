@@ -271,6 +271,8 @@ footer p a {
     background-image: url(../images/polonez_car.png);
   }
 
+  /* Note that in lesson "Modifying the Color Scheme", he shows how to make the header and footer
+     fill the entire width of the screen but keep left and right margins on the body content. */
   div#wrapper {
     max-width: 80rem;
     margin: 0 auto;
