@@ -86,10 +86,27 @@ main {
         text-align: center;
         color: $primaryColor;
     }
+    div.blog article {
+        margin: .5rem $gutter;
+        width: 100%-$gutterdbl;
+    }
     h1 {
         font-size: 2rem;
         margin: 1rem 0 0 $gutter;   // "New Cars should line up with "Robert's Autos"
         color: $primaryColor;
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin: .75rem 0 0 $gutter;
+        color: lighten($color: $primaryColor, $amount: 10%);
+    }
+    h3 {
+        font-size: 1.2rem;
+        color: lighten($color: $primaryColor, $amount: 10%);
+    }
+    p {
+        line-height: 130%;
+        color: $fontColor;
     }
     hr.fadeAway {
         // I didn't understand how he used https://www.colorzilla.com/gradient-editor/ to generate this

@@ -8,4 +8,14 @@ main {
                                         // Warning: this causes main element to collapse!
                                         // Therefore, we add clearfix class to main tag in index.html.
     }
+    div.blog article {
+        float: left;
+        width: 50%-$gutterdbl;
+    }
+    /* Since the blog articles are of different lengths (i.e. heights in our layout), set the first,
+       third, fifth, and seventh articles to clear left.  Set the even-numbered articles to *not*
+       clear left. This stacks 1, 3, 5, 7 on the left and 2, 4, 6, & 8 on the right. */
+    div.blog article:nth-child(2n+1) {     // 2n means every second child so 2n+1 = 1, 3, 5, 7 (n=0)
+        clear: left;
+    }
 }

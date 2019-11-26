@@ -24,4 +24,16 @@ main {
                                         // Warning: this causes main element to collapse!
                                         // Therefore, we add clearfix class to main tag in index.html.
     }
+    div.blog article {
+        float: left;
+        width: 33.3%-$gutterdbl;
+    }
+    /* These next two rules work together. On large screens, we need to remove the rule for medium screens
+        and then add the rules for large screens. */
+    div.blog article:nth-child(2n+1) {     // Remove rule for medium screens
+        clear: none;
+    }
+    div.blog article:nth-child(3n+1) {     // Change to 3n to arrange in three columns
+        clear: left;
+    }
 }
