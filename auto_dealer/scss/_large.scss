@@ -1,3 +1,14 @@
+/* --- BODY ------------------------------------------------------------------------------------- */
+body {
+    background-image: url(../images/polonez_car.png);  // Add subtle pattern to page's background
+}
+div#wrapper {                        // I like how he does this!
+    max-width: 80rem;                // Center the entire page horizontally
+    margin: 0 auto;                  // "auto" means center the content
+    background-color: #fff;        // Do this so body background image doesn't appear in page
+    box-shadow: 0 0 10px #000000;  // Add a subtle shadow around the entire page wrapper
+}
+
 /* --- NAVIGATION ------------------------------------------------------------------------------- */
 nav {
     ul {
